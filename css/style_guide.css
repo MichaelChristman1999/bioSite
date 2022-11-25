@@ -3,3 +3,10 @@ html {
     background-color: teal;
     color: white;
 }
+
+.primary-navigation {
+    float: right;
+    margin-top: 30px;
+    text-align: right;
+    width: 70%;
+}
