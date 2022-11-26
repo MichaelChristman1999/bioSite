@@ -4,9 +4,25 @@ html {
     color: white;
 }
 
-.primary-navigation {
-    float: right;
-    margin-top: 30px;
-    text-align: right;
-    width: 70%;
+.subject-name {
+    font-size: 300%; 
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.biosite-container {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#main-content {
+    text-align:center;
+}
+
+.about-ryan-salva {
+    font-size: 250%;
 }
