@@ -8,6 +8,19 @@ html {
     font-size: 300%; 
 }
 
+.page-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
+
 .center-image {
     display: block;
     margin-left: auto;
@@ -15,8 +28,8 @@ html {
 }
 
 .biosite-container {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #main-content {
@@ -25,4 +38,12 @@ html {
 
 .about-ryan-salva {
     font-size: 250%;
+}
+
+a {
+    color: pink;
+}
+
+a:hover {
+    color: peachpuff;
 }
