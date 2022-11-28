@@ -8,6 +8,29 @@ html {
     font-size: 300%; 
 }
 
+.job-title {
+    text-align:center;
+    margin-top:150px;
+}
+
+.relevant-experience {
+    text-align:center;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top:-180px;
+}
+
+.primary-navigation {
+    margin-left: 1020px;
+    margin-top: -50px;
+}
+
+#subject-container{width:100%;}
+#left-section{text-align:center;width:30%;}
+#right-section{text-align:center; width:30%;}
+#center-photo{margin-top:-180px;}
+
+
 .page-button {
   background-color: #4CAF50;
   border: none;
@@ -15,28 +38,35 @@ html {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 20px;
+  margin: 6px 4px;
   cursor: pointer;
  }
 
-.center-image {
+.ryan-portrait {
     display: block;
+    margin-top:25px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.biosite-container {
+.webpage-container {
     margin-left: 100px;
     margin-right: 100px;
 }
 
-#main-content {
-    text-align:center;
+#landing-page-container {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top:160px;
 }
 
-.about-ryan-salva {
+.main-content {
+    text-align:center;
+    margin-bottom: 60px;
+}
+
+#about-ryan-salva {
     font-size: 250%;
 }
 
@@ -46,4 +76,14 @@ a {
 
 a:hover {
     color: peachpuff;
+}
+
+#jockey-info {
+    margin-left: 25px;
+    margin-bottom: -140px;
+}
+
+#jockey-photos {
+    margin-bottom: 100px;
+    margin-left:520px;
 }
