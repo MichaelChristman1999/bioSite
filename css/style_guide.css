@@ -1,3 +1,5 @@
+<!-- Main styles -->
+
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: teal;
@@ -43,11 +45,6 @@ p {
     margin-top:-180px;
 }
 
-.primary-navigation {
-    margin-left: 1000px;
-    margin-top: -130px;
-}
-
 #subject-container {
     width:100%;
 }
@@ -68,6 +65,13 @@ p {
 #center-photo  {
     margin-top:-190px;
     margin-left: 41%;
+}
+
+<!-- Navigation / button styles -->
+
+.primary-navigation {
+    margin-left: 1000px;
+    margin-top: -130px;
 }
 
 .page-button {
@@ -101,6 +105,7 @@ ul {
     list-style-position: inside; 
 }
 
+<!-- Container styles -->
 .primary-container {
     margin-left: 237px;
     width: 90%;
@@ -117,6 +122,7 @@ ul {
     margin-bottom: 60px;
 }
 
+<!-- Resume credential styles -->
 #resume-statement, .resume-caption-1, .resume-caption-2, .resume-list-1, .resume-list-2 { 
     border: 2px solid gold;
     background-color: white;
@@ -147,6 +153,8 @@ ul {
     margin-top: -30px;
     width: 70%;
 } 
+
+<!-- Miscellaneous styles -->
 
 #footer-section { 
     background-color: rgb(202, 202, 151); 
