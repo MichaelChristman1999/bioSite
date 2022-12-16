@@ -16,12 +16,6 @@ p {
     line-height: 2;
 }
 
-<!-- Update: added style for .paragraph-text -->
-
-.paragraph-text {
-    width: 70%;
-}
-
 .subject-name {
     font-size: 325%; 
     margin-right: 125px;
@@ -84,8 +78,6 @@ p {
   cursor: pointer;
 }
 
-<!-- Update: added styles for .page-button-1 and page-button-2 -->
-
 .page-button-1 {
     margin-left: -170px;
 }
@@ -121,15 +113,6 @@ ul {
     margin-bottom: 60px;
 }
 
-<!-- Update: added style for #resume-statement and multiple classes -->
-
-#resume-statement, .resume-caption-1, .resume-caption-2, .resume-list-1, .resume-list-2 { 
-    border: 2px solid gold;
-    background-color: white;
-    color: teal;
-    padding: 4px;
-}
-
 .resume-caption-1 {
     margin-top: 80px;
 }
@@ -147,14 +130,6 @@ ul {
     margin-left: 655px;
     width:40%;
 }
-
-<!-- Update: added style for #resume-statement -->
-
-#resume-statement {
-    margin-left: 180px;
-    margin-top: -30px;
-    width: 70%;
-} 
 
 #footer-section { 
     background-color: rgb(202, 202, 151); 
