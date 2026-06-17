@@ -1,24 +1,57 @@
+/* ===================================================================
+   📋 ABOUT PAGE STRUCTURAL SYSTEM
+   =================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .paragraph-text {
-    width: 70%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem auto; /* Clean auto-centering with bottom spacing */
 }
 
 #resume-statement, .resume-caption-1, .resume-caption-2, .resume-list-1, .resume-list-2 { 
     border: 2px solid gold;
     background-color: white;
     color: teal;
-    padding: 4px;
-}
-
-.page-button-1 {
-    margin-left: -170px;
-}
-
-.page-button-3 {
-    margin-left: 170px;
+    padding: 12px; /* Increased padding for better text readability */
+    border-radius: 6px;
 }
 
 #resume-statement {
-    margin-left: 180px;
-    margin-top: -30px;
-    width: 70%;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto; /* BANISH: Removes margin-left: 180px and margin-top: -30px */
 } 
+
+/* ===================================================================
+   🎯 BUTTON ELEMENT FLEX SYSTEM (Replaces manual -170px / 170px offsets)
+   =================================================================== */
+
+.page-button-group {
+    display: flex;
+    justify-content: center; /* Automatically centers all action buttons */
+    gap: 1.5rem;             /* Spacings buttons evenly without hardcoded breaks */
+    margin: 2rem 0;
+}
+
+.page-button {
+    background-color: #4CAF50;
+    border: 2px solid ivory;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+.page-button:hover {
+    transform: translateY(-2px);
+}

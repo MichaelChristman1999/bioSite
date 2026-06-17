@@ -1,14 +1,28 @@
+css/* ===================================================================
+   🧱 CORE STYLING & DESIGN TOKENS
+   =================================================================== */
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: teal;
     color: white;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 #biosite-header {
-background-color: #3C275A;
-color: #FFF;
-padding: 40px;
-text-align: center;    
+    background-color: #3C275A;
+    color: #FFF;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;    
 }
 
 p {
@@ -18,153 +32,137 @@ p {
 
 .subject-name {
     font-size: 325%; 
-    margin-right: 125px;
 }
 
-.job-title {
-    text-align:center;
-    margin-top:150px;
-}
+/* ===================================================================
+   🏗️ ADVANCED LAYOUT CONTROLLERS (Banish the Negative Margins)
+   =================================================================== */
 
-.top-left-image {
-    float: left;
-    margin-left:-25px;
-    margin-top: -75px;
-}
-
-.relevant-experience {
-    text-align:center;
-    margin-left: auto;
-    margin-right: 50px;
-    margin-top:-180px;
+/* 1. Header Navigation Wrapper System */
+.header-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .primary-navigation {
-    margin-left: 1000px;
-    margin-top: -130px;
+    display: flex;
+    gap: 1.5rem;
 }
 
+/* 2. Three-Column Profile Sections System (Replaces nested -190px pushes) */
 #subject-container {
-    width:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
-#left-section {
-    text-align:center;
-    margin-top: 160px;
-    margin-left: 55px;
-    width:30%;
+@media (min-width: 768px) {
+    #subject-container {
+        grid-template-columns: repeat(3, 1fr); /* Clean 3-column layout on tablet/desktop */
+        align-items: center;
+    }
 }
 
-#right-section  {
-    text-align:center; 
-    margin-top: -170px;
-    width:30%;
+#left-section, #right-section, #center-photo {
+    text-align: center;
+    width: 100%;
 }
 
-#center-photo  {
-    margin-top:-190px;
-    margin-left: 41%;
+/* 3. Resume Columns System (Replaces the fragile -346px column pushes) */
+.resume-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .resume-layout-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 balanced columns automatically */
+    }
+}
+
+.resume-column {
+    width: 100%;
+}
+
+/* 4. Split Gallery Content (Replaces catastrophic -1260px image overlaps) */
+.split-content-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    .split-content-view {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===================================================================
+   🎯 INTERACTIVE ELEMENTS & UTILITIES
+   =================================================================== */
+.page-button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
 }
 
 .page-button {
-  background-color: #4CAF50;
-  border: 2px solid ivory;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 7px 6px;
-  cursor: pointer;
+    background-color: #4CAF50;
+    border: 2px solid ivory;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.page-button-1 {
-    margin-left: -170px;
+.page-button:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
 }
 
-.page-button-3 {
-    margin-left: 170px;
-}
-
-.ryan-portrait {
+.ryan-portrait, .top-left-image {
     display: block;
-    margin-top:25px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
 ul { 
     list-style-position: inside; 
 }
 
-.primary-container {
-    margin-left: 237px;
-    width: 90%;
-}
-
-#landing-page-container {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top:160px;
-}
-
-.main-content {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.resume-caption-1 {
-    margin-top: 80px;
-}
-
-.resume-caption-2 {
-    margin-top: -346px;
-}
-
-.resume-caption-1, .resume-list-1 {
-    margin-left: 105px;
-    width:40%;
-}
-
-.resume-caption-2, .resume-list-2 {
-    margin-left: 655px;
-    width:40%;
-}
-
 #footer-section { 
     background-color: rgb(202, 202, 151); 
     color: teal;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
-    position: relative;
-    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 .subheader-text {
     font-size: 250%;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-a {
-    color: pink;
-}
-
-a:hover {
-    color: peachpuff;
-}
-
-#jockey-content {
-    margin-bottom: 200px;
-}
-
-#jockey-info {
-    margin-left: 30px;
-    font-size: 80%;
-}
-
-#jockey-photos {
-    margin-top: -1260px;
-    margin-left:55%;
-    font-size: 80%;
-}
+a { color: pink; transition: color 0.2s ease; }
+a:hover { color: peachpuff; }

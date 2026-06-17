@@ -1,80 +1,103 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  .image-gallery {
+/* ===================================================================
+   🖼️ INTERACTIVE GALLERY SLIDER SYSTEM
+   =================================================================== */
+
+.image-gallery {
     position: relative;
-  }
-  
-  .gallery-items {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery-items {
     display: none;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
+}
+
+.cursor {
     cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
+}
+
+/* ===================================================================
+   🏹 INTERACTIVE NAVIGATION CONTROLS (Banish margin-top: -50px)
+   =================================================================== */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 50%;                 /* Centers perfectly down the vertical frame midpoint */
+    transform: translateY(-50%); /* BANISH: Replaces margin-top: -50px with a fluid transform */
     width: auto;
     padding: 16px;
-    margin-top: -50px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
+    font-size: 24px;
     user-select: none;
     -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
+    background-color: rgba(0, 0, 0, 0.3); /* Soft visible backing for better accessibility */
+    transition: background-color 0.2s ease;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.next {
     right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
+    border-radius: 4px 0 0 4px;
+}
+
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .numbertext {
+}
+
+.numbertext {
     color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+    font-size: 13px;
+    padding: 12px;
     position: absolute;
     top: 0;
-  }
-  
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 4px 0;
+}
 
-  .column {
-    float: left;
-    width: 16.66%;
-  }
-  
-  .demo {
+.caption-container {
+    text-align: center;
+    background-color: #111;
+    padding: 12px 16px;
+    color: white;
+}
+
+/* ===================================================================
+   🧱 THUMBNAIL RESPONSIVE GRID SYSTEM (Banish float: left)
+   =================================================================== */
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns on Mobile viewports */
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .row {
+        grid-template-columns: repeat(6, 1fr); /* BANISH: Replaces float: left and width: 16.66% */
+    }
+}
+
+.column {
+    width: 100%; /* Columns now expand and size automatically within the grid track layout */
+}
+
+.demo {
     opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
+    transition: opacity 0.2s ease;
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.active,
+.demo:hover {
     opacity: 1;
-  }
+}
